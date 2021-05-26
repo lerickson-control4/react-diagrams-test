@@ -1,0 +1,1 @@
+export type DataType = Date | string | boolean | number;

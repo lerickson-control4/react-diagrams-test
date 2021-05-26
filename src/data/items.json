@@ -1,0 +1,44 @@
+[
+    {
+        "id": 1,
+        "type": "device",
+        "name": "Front Door Lock",
+        "location": "Entry Foyer"
+    },
+    {
+        "id": 2,
+        "type": "device",
+        "name": "Porch Lights",
+        "location": "Front Porch"
+    },
+    {
+        "id": 3,
+        "type": "device",
+        "name": "Hall Lights",
+        "location": "Entry Foyer"
+    },
+    {
+        "id": 4,
+        "type": "device",
+        "name": "Front Blinds",
+        "location": "Drawing Room"
+    },
+    {
+        "id": 5,
+        "type": "agent",
+        "name": "Scheduler",
+        "location": "System Service"
+    },
+    {
+        "id": 6,
+        "type": "agent",
+        "name": "Notifications",
+        "location": "System Service"
+    },
+    {
+        "id": 7,
+        "type": "agent",
+        "name": "Announcements",
+        "location": "System Service"
+    }
+]

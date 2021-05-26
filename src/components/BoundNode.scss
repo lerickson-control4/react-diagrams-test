@@ -1,0 +1,64 @@
+.port {
+  border-radius: 6px;
+  border-color: transparent;
+  &.device {
+    border-color: darkorange;
+    .header {
+      background-color: darkorange;
+      color: black;
+    }
+  }
+  &.agent {
+    border-color: darkorchid;
+    .header {
+      background-color: darkorchid;
+      color: white;
+    }
+  }
+  .header {
+    border-bottom: 1px solid grey;
+    padding: 6px;
+    text-align: center;
+    .name {
+      font-size: 9pt;
+    }
+    .location {
+      font-size: 8pt;
+    }
+  }
+  .ports {
+    background: darkslategray;
+    color: white;
+    padding: 12px 0;
+    display: flex;
+    justify-content: space-between;
+    .port {
+      border-bottom: 1px solid grey;
+      .type {
+        padding: 3px;
+        border-right: 1px solid lightgrey;
+      }
+      .name {
+        padding: 3px;
+      }
+      &.bound {
+        .type {
+          font-weight: bold;
+        }
+        .name {
+          font-weight: bold;
+        }
+      }
+    }
+    .outputs {
+      flex-direction: row-reverse;
+      .events {
+        padding: 6px 0;
+      }
+      .variables {
+        border-top: 1px solid grey;
+        padding: 6px 0;
+      }
+    }
+  }
+}
