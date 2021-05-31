@@ -3,25 +3,96 @@
         "id": 1,
         "type": "device",
         "name": "Front Door Lock",
-        "location": "Entry Foyer"
+        "location": "Entry Foyer",
+        "commands": [
+            {
+                "name": "Unlock"
+            },
+            {
+                "name": "Lock"
+            }
+        ]
     },
     {
         "id": 2,
         "type": "device",
         "name": "Porch Lights",
-        "location": "Front Porch"
+        "location": "Front Porch",
+        "commands": [
+            {
+                "name": "Turn On"
+            },
+            {
+                "name": "Turn Off"
+            }
+        ]
     },
     {
         "id": 3,
         "type": "device",
         "name": "Hall Lights",
-        "location": "Entry Foyer"
+        "location": "Entry Foyer",
+        "commands": [
+            {
+                "name": "Turn On"
+            },
+            {
+                "name": "Turn Off"
+            },
+            {
+                "name": "Set Level",
+                "params": [
+                    {
+                        "name": "Level",
+                        "type": "number",
+                        "validation": {
+                            "max": 100,
+                            "min": 0
+                        }
+                    }
+                ]
+            }
+        ]
     },
     {
         "id": 4,
         "type": "device",
         "name": "Front Blinds",
-        "location": "Drawing Room"
+        "location": "Drawing Room",
+        "commands": [
+            {
+                "name": "Open"
+            },
+            {
+                "name": "Close"
+            },
+            {
+                "name": "Open to Level",
+                "params": [
+                    {
+                        "name": "Level",
+                        "type": "number",
+                        "validation": {
+                            "max": 100,
+                            "min": 0
+                        }
+                    }
+                ]
+            },
+            {
+                "name": "Close to Level",
+                "params": [
+                    {
+                        "name": "Level",
+                        "type": "number",
+                        "validation": {
+                            "max": 100,
+                            "min": 0
+                        }
+                    }
+                ]
+            }
+        ]
     },
     {
         "id": 5,
@@ -33,12 +104,34 @@
         "id": 6,
         "type": "agent",
         "name": "Notifications",
-        "location": "System Service"
+        "location": "System Service",
+        "commands": [
+            {
+                "name": "Send Prepared Notification",
+                "params": [
+                    {
+                        "name": "Notification",
+                        "type": "ref:Notification"
+                    }
+                ]
+            }
+        ]
     },
     {
         "id": 7,
         "type": "agent",
         "name": "Announcements",
-        "location": "System Service"
+        "location": "System Service",
+        "commands": [
+            {
+                "name": "Broadcast Announcement",
+                "params": [
+                    {
+                        "name": "Announcement",
+                        "type": "ref:Announcement"
+                    }
+                ]
+            }
+        ]
     }
 ]

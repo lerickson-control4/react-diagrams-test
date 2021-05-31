@@ -1,6 +1,6 @@
-import { Action } from "./action";
+import Binding from "./binding";
 
 export interface Event {
     name: string;
-    actions: Action[];
+    bindings: Binding[];
 }

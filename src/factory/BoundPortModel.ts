@@ -1,24 +1,24 @@
-import { DefaultPortModel, DefaultPortModelOptions } from "@projectstorm/react-diagrams-defaults";
-import { Command } from "../models/command";
-import { DataType } from "../models/dataType";
-import { Event } from "../models/event";
+import { PortModel } from "@projectstorm/react-diagrams-core";
+import { DefaultPortModelGenerics, DefaultPortModelOptions } from "@projectstorm/react-diagrams-defaults";
 import { Item } from "../models/item";
 import { PortType } from "../models/portType";
-import { Variable } from "../models/variable";
 
-export interface BoundPortModelProps {
+export interface BoundPortModelOptions extends DefaultPortModelOptions {
     item: Item;
-    port: Command | Variable<DataType> | Event;
+    port: PortType;
 }
 
-export default class BoundPortModel extends DefaultPortModel implements BoundPortModelProps {
+export interface BoundPortModelGenerics extends DefaultPortModelGenerics {
+    OPTIONS: BoundPortModelOptions;
+}
+
+export default class BoundPortModel extends PortModel<BoundPortModelGenerics> {
     public item: Item;
     public port: PortType;
 
-    constructor(item: Item, port: PortType, config: DefaultPortModelOptions) {
+    constructor(config: BoundPortModelOptions) {
         super(config);
-        this.item = item;
-        this.port = port;
+        this.item = config.item;
+        this.port = config.port;
     }
-
 }

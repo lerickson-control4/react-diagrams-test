@@ -3,6 +3,8 @@ import createEngine, {
     DiagramModel,
 } from '@projectstorm/react-diagrams';
 import { BoundNodeFactory } from '../factory/BoundNodeFactory';
+import { BoundPortFactory } from '../factory/BoundPortFactory';
+import BoundPortModel from '../factory/BoundPortModel';
 import { Item } from '../models/item';
 import buildNode from './buildNode';
 import getItems from './getItems';
@@ -13,6 +15,9 @@ const initEngine = () => {
     //1) setup the diagram engine
     var engine = createEngine();
 
+    engine
+        .getPortFactories()
+        .registerFactory(new BoundPortFactory('diamond', (config) => new BoundPortModel(config)));
     const factory = new BoundNodeFactory();
     engine.getNodeFactories().registerFactory(factory);
 

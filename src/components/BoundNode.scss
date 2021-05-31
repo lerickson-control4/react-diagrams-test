@@ -1,6 +1,8 @@
-.port {
+.node {
   border-radius: 6px;
-  border-color: transparent;
+  border: 2px solid;
+  min-width: 200px;
+  max-width: 400px;
   &.device {
     border-color: darkorange;
     .header {

@@ -18,7 +18,7 @@ export class BoundNodeFactory extends AbstractReactFactory<
 
   generateReactWidget(event: GenerateWidgetEvent<BoundNodeModel>): JSX.Element {
     console.log('generating widget');
-    return <BoundNode engine={this.engine} size={50} node={event.model} />;
+    return <BoundNode engine={this.engine} node={event.model} />;
   }
 
   generateModel(event: GenerateModelEvent) {
